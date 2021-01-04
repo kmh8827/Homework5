@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day Planner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class= "title">Worker Day Schedule</h1>
+        <h2 class= "subtitle">This handy app can help you track your daily work events</h2>
+    </header>
+    <container>
+    <table>
+        <tr class="block">
+            <td class="time" width="8%">5:00 P.M.</td>
+            <td width="80%">
+                <textarea class="centerArea" rows="8" cols="215"></textarea>
+            </td>
+            <td class="lock" width="10%"></td>
+        </tr>
+    </table>
+    </container>
+
+    <script type="text/javascript">
+    for (var i=0;i<9;i++)
+    {
+        //addTimeArea();
+        addTextArea();
+        //addLock();
+    }
+    function addTextArea() {
+        var dailyPlans = $("<textarea></textarea>").text("Hello There");
+        dailyPlans.attr("class","centerArea");
+        dailyPlans.attr("rows","8");
+        dailyPlans.attr("cols","215");
+        $("body").append(dailyPlans);
+    };
+    function addTimeArea() {
+        
+    };
+    function addLock() {
+
+    };
+    </script>
+</body>
+
+</html>

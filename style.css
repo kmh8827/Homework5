@@ -1,0 +1,20 @@
+tr.block td   {
+ border-bottom: 1px dashed black;   
+ border-right: 1px dashed black;
+}
+
+.time {
+    text-align: center;
+}
+
+.centerArea {
+    background-color: springgreen;
+}
+.title {
+    text-align: center;
+    font-size: 128px;
+}
+.subtitle {
+    text-align: center;
+    font-size: 48px;
+}
