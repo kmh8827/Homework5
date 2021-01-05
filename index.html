@@ -39,11 +39,15 @@
             newTime = newTime + ":00 A.M";
         }
         $("container td").first().attr("width","8%");
-        var textContent = "<tr><td><p>" + newTime + "</p></td><td><textarea></textarea></td><td><img src='lock.jpg'></tr>";
+        var textContent = "<tr><td><p>" + newTime + "</p></td><td><textarea></textarea></td><td><img src='assets/lock.png'></tr>";
         planningTable.append(textContent);
         $("textarea").attr("class","centerArea");
         $("textarea").attr("rows","8");
         $("textarea").attr("cols","215");
+        $("img").attr("height","50%").attr("width","60%");
+        $("img").click(function () {
+            //SAVE TO STORAGE
+        });
         
         //addLock();
     }
