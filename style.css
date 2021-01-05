@@ -9,6 +9,7 @@ tr.block td   {
 
 .centerArea {
     background-color: springgreen;
+    resize: none;
 }
 .title {
     text-align: center;

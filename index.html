@@ -13,7 +13,7 @@
         <h2 class= "subtitle">This handy app can help you track your daily work events</h2>
     </header>
     <container>
-    <table>
+    <!-- <table>
         <tr class="block">
             <td class="time" width="8%">5:00 P.M.</td>
             <td width="80%">
@@ -21,29 +21,35 @@
             </td>
             <td class="lock" width="10%"></td>
         </tr>
-    </table>
+    </table> -->
     </container>
 
     <script type="text/javascript">
-    for (var i=0;i<9;i++)
-    {
-        //addTimeArea();
-        addTextArea();
+    function createTable() {
+        console.log("hello");
+        var planningTable = $("<table></table>");
+        $("container").append(planningTable);
+        for (var i=0;i<9;i++)
+    {   
+        var newTime = i+9;
+        if (newTime > 12) {
+            newTime = i-3;
+            newTime = newTime + ":00 P.M";
+        } else {
+            newTime = newTime + ":00 A.M";
+        }
+        $("container td").first().attr("width","8%");
+        var textContent = "<tr><td><p>" + newTime + "</p></td><td><textarea></textarea></td><td><img src='lock.jpg'></tr>";
+        planningTable.append(textContent);
+        $("textarea").attr("class","centerArea");
+        $("textarea").attr("rows","8");
+        $("textarea").attr("cols","215");
+        
         //addLock();
     }
-    function addTextArea() {
-        var dailyPlans = $("<textarea></textarea>").text("Hello There");
-        dailyPlans.attr("class","centerArea");
-        dailyPlans.attr("rows","8");
-        dailyPlans.attr("cols","215");
-        $("body").append(dailyPlans);
-    };
-    function addTimeArea() {
-        
-    };
-    function addLock() {
+    }
+    createTable();
 
-    };
     </script>
 </body>
 
