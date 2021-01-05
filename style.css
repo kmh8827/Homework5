@@ -19,3 +19,11 @@ tr.block td   {
     text-align: center;
     font-size: 48px;
 }
+
+.lock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 60%;
+}
