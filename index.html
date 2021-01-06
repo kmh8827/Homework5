@@ -18,7 +18,7 @@
 </body>
     <script type="text/javascript">
 
-    var storedData = ["a","a","a","a","a","a","a","a","a"];
+    var storedData = [" "," "," "," "," "," "," "," "," "];
 
     //Makes a series of Text-Areas that the user can use to store data for work-day events
     function createTable() {
@@ -106,9 +106,11 @@
         console.log(localData);
         console.log("why");
         for (var z = 0; z < storedData.length; z++) {
+            if (localData) {
             storedData[z] = localData[z];
             $("#"+z).val(storedData[z]);
             console.log(storedData[z]);
+            }
         }
      }
 
