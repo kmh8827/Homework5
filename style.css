@@ -1,8 +1,11 @@
+.day {
+    font-size: 36px;
+    text-align: center;
+}
 tr.block td   {
  border-bottom: 1px dashed black;   
  border-right: 1px dashed black;
 }
-
 .time {
     text-align: center;
 }
