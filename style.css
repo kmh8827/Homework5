@@ -9,9 +9,16 @@ tr.block td   {
 .time {
     text-align: center;
 }
-
-.centerArea {
+.centerAreaFuture {
     background-color: springgreen;
+    resize: none;
+}
+.centerAreaCurrent {
+    background-color: lightgray;
+    resize: none;
+}
+.centerAreaPast {
+    background-color: coral;
     resize: none;
 }
 .title {
@@ -22,7 +29,6 @@ tr.block td   {
     text-align: center;
     font-size: 48px;
 }
-
 .lock {
     display: block;
     margin-left: auto;

@@ -33,17 +33,32 @@
         $("container").append(planningTable);
         for (var i=0;i<9;i++)
         {   
-            var newTime = i+9;
-            if (newTime > 12) {
-                newTime = i-3;
-                newTime = newTime + ":00 P.M";
-            } else {
-                newTime = newTime + ":00 A.M";
-            }
+            
             $("container td").first().attr("width","8%");
-            var textContent = "<tr class='block'><td><p class='time'>" + newTime + "</p></td><td><textarea id=" + i +"></textarea></td><td><img class='lock' id=" + i + "lock src='assets/lock.png'></tr>";
+
+            
+            var newTime = i+9;
+
+            if (newTime > 12) {
+                newTime = newTime - 12 + ":00 P.M.";
+            } else {
+                newTime = newTime + ":00 A.M."
+            }
+
+            var textContent = "<tr class='block'><td><p class='time'>" + newTime+ "</p></td><td><textarea id=" + i +"></textarea></td><td><img class='lock' id=" + i + "lock src='assets/lock.png'></tr>";
             planningTable.append(textContent);
-            $("textarea").attr("class","centerArea");
+        
+            
+            var ampm = i+9;
+            console.log(ampm);
+            console.log(dayjs().format("H") + " Current Time");
+            if (ampm < dayjs().format("H")) {
+                $("#"+i).attr("class","centerAreaFuture");
+            } else if (ampm === parseInt(dayjs().format("H"))) {
+                $("#"+i).attr("class","centerAreaCurrent");
+            } else {
+                $("#"+i).attr("class","centerAreaPast");
+            }
             $("textarea").attr("rows","8");
             $("textarea").attr("cols","215");
         }
