@@ -45,7 +45,7 @@
                 newTime = newTime + ":00 A.M."
             }
 
-            var textContent = "<tr class='block'><td><p class='time'>" + newTime+ "</p></td><td><textarea id=" + i +"></textarea></td><td><img class='lock' id=" + i + "lock src='assets/lock.png'></tr>";
+            var textContent = "<tr class='block'><td><p class='time'>" + newTime+ "</p></td><td><textarea id=" + i +"></textarea></td><td><input type='image' class='lock' id=" + i + "lock src='assets/lock.png'></tr>";
             planningTable.append(textContent);
         
             
@@ -69,47 +69,47 @@
     //User clicks on the lock icon to store their events in local storage
     $("#0lock").click(function () {
         var storeThisDay = "0";
-        var storeThisStuff = $("#0").val();
+        var storeThisStuff = $("#0").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#1lock").click(function () {
         var storeThisDay = "1";
-        var storeThisStuff = $("#1").val();
+        var storeThisStuff = $("#1").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#2lock").click(function () {
         var storeThisDay = "2";
-        var storeThisStuff = $("#2").val();
+        var storeThisStuff = $("#2").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#3lock").click(function () {
         var storeThisDay = "3";
-        var storeThisStuff = $("#3").val();
+        var storeThisStuff = $("#3").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#4lock").click(function () {
         var storeThisDay = "4";
-        var storeThisStuff = $("#4").val();
+        var storeThisStuff = $("#4").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#5lock").click(function () {
         var storeThisDay = "5";
-        var storeThisStuff = $("#5").val();
+        var storeThisStuff = $("#5").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#6lock").click(function () {
         var storeThisDay = "6";
-        var storeThisStuff = $("#6").val();
+        var storeThisStuff = $("#6").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#7lock").click(function () {
         var storeThisDay = "7";
-        var storeThisStuff = $("#7").val();
+        var storeThisStuff = $("#7").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
     $("#8lock").click(function () {
         var storeThisDay = "8";
-        var storeThisStuff = $("#8").val();
+        var storeThisStuff = $("#8").val().trim();
         storeItems(storeThisDay,storeThisStuff);
     });
 
